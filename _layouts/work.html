@@ -1,0 +1,54 @@
+<html>
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="/css/styles.css">
+	<title>John Zeiders</title>
+</head>
+
+<body>
+	<div class="container container-fixed flex-column ">
+		<div class="nav-buttons-container">
+			<a href="/"> Back</a>
+		</div>
+		<div class="title-container">
+			<h1> @ {{page.title}}</h1>
+			{% if page.endDate == "Now" %}
+			<h4> I am a {{page.role}}. </h4>
+			{% endif %} {% if page.endDate != "Now" %}
+			<h4> I was a {{page.role}}. </h4>
+			{% endif %}
+			<h6> {{page.startDate}} to {{page.endDate}}.</h6>
+		</div>
+		<hr class="line-break" />
+		<div class="info-container">
+			<div class="skills-container">
+				<span class="info-header">Tech Stack - </span>
+				<div class="list-vertical">
+					{% for tag in page.tags %}
+					<div class="list-element">
+						{{tag}}
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class='projects-container'>
+				<span class="info-header">Projects -</span>
+				<div class="list-vertical">
+					{% for projcet in page.projects %}
+					<div class="list-element">
+						{{project}}
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="description">
+			{{page.description}}
+		</div>
+		<div class="photo-container">
+			<img src="">
+		</div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<html>
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="/css/styles.css">
+	<title>John Zeiders</title>
+</head>
+
+<body>
+	<div class="container container-fixed flex-column ">
+		<div class="nav-buttons-container">
+			<a href="/"> Back</a>
+		</div>
+		<div class="title-container">
+			<h1> @ {{page.title}}</h1>
+			<h4> We Created {{page.project}}. </h4>
+		</div>
+		<hr class="line-break" />
+		<div class="info-container">
+			<div class='roles-container'>
+
+				<span class="info-header">Roles -</span>
+				<div class="list-vertical">
+					{% for role in page.roles %}
+					<div class="list-element">
+						{{role}}
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="skills-container">
+				<span class="info-header">Tech Stack - </span>
+				<div class="list-vertical">
+					{% for tag in page.tags %}
+					<div class="list-element">
+						{{tag | capitalize}}
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			{% if page.awards %}
+			<div class="awards-container">
+				<span class="info-header">Awards- </span>
+				<div class="list-vertical">
+					{% for award in page.awards %}
+					<div class="list-element">
+						{{award }}
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			{% endif %}
+		</div>
+		<div class="description">
+			{{page.description}}
+		</div>
+		<div class="photo-container">
+			<img src="">
+		</div>
+</body>
+
+</html>

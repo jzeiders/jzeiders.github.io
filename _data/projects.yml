@@ -1,0 +1,14 @@
+- title: Bashify
+  link: Bashify
+  type: PROJECT
+  brief: A command line project for spotify
+  tags:
+    - node
+- title: Its Lit
+  link: lit
+  brief: 
+  type: PROJECT
+  tags:
+    - arduino
+    - node
+    - css

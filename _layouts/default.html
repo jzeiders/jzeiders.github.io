@@ -1,0 +1,53 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel="stylesheet" href={{ "/css/styles.css"| relative_url }}>
+	<title>John Zeiders</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="container-header">
+			John Zeiders
+		</div>
+		<div class="container-content">
+			{% include sidebar.html %}
+			<!-- Sidebar -->
+			{% assign items = site.data.work | concat: site.data.hackathons | concat: site.data.projects %}
+			<!-- Assign featured -->
+			{% assign featured = items | where: "isFeatured", "true" %}
+			<!-- Assign not -->
+			{% assign notFeatured = items | where: "isFeatured", "false" %} {% assign itemsSorted = featured | concat: notFeatured %}
+			<div>
+				<div class="grid">
+					<div class="col col-primary border-right-large">
+						{% assign primaryItems = itemsSorted | slice:0, 2 %} {% include profileCard.html %} {% for item in primaryItems %}{% include
+						card.html item=item %} {% endfor %}
+					</div>
+					<div class="col col-primary">
+						{% assign secondaryItems = itemsSorted | slice:2, 5 %} {% for item in secondaryItems %}{% include card.html item=item %}
+						{% endfor %}
+					</div>
+
+				</div>
+				<div class="more-events-container">
+					<div class="subheader">
+						More Events
+					</div>
+					<div class="grid-wrap">
+						{% assign restItems = itemsSorted | slice: 7, 100 %} {% for item in restItems %}{% include card.html item=item %} {% endfor
+						%}
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	{% include footer.html %}
+</body>
+
+<script src={{ "/assets/script.js" | relative_url }}></script>
+
+</html>

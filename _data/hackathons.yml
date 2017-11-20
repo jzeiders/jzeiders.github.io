@@ -1,0 +1,85 @@
+- title: 'Hacktech 2017'
+  link: 'Hacktech'
+  project: Tour
+  type: "HACKATHON"
+  tags: 
+    - postgres
+    - node
+    - react
+    # - azure
+  roles:
+    - Web Designer
+    - API Architect
+  description: "We created a thing"
+  brief: "Created Tour The journey sharing application"
+  isFeatured: true
+
+- title: 'TreeHacks 2017'
+  link: 'treehacks'
+  type: "HACKATHON"
+  project: 'Spectrum'
+  tags: 
+    - node
+    - docker
+    - aws
+    - chrome
+  brief: Developed Spectrum, A Chrome Extension for recognizing news bias
+  isFeatured: true
+
+- title: 'Hackpoly 2017'
+  link: 'hackpoly'
+  type: "HACKATHON"
+  project: "MU"
+  tags:
+    - react
+    - css
+  brief: Analyzed Music Preferences and Mood with an EEG
+  isFeatured: false
+- title: 'SBHacks III'
+  link: 'sbhacks'
+  type: "HACKATHON"
+  project: 'Globe'
+  tags: 
+    - react
+    - css
+    - aws
+  roles:
+    - Frontend Engineer
+    - Designer
+  awards: 
+    - Best Use of Esri Development Platform
+    - Amazon Web Services - Best Use of AWS 
+  brief: Connected Maps to Alexa and Leap Motion
+  isFeatured: false
+
+- title: 'HackRice 6'
+  link: 'hackrice'
+  type: "HACKATHON"
+  project: "Keep Your Friends Closer"
+  tags:
+    - node
+    - d3
+  brief: Helped people connect with keep your friends closer
+  isFeatured: false
+
+- title: 'SD Hacks 2016'
+  link: 'sdhacks'
+  type: "HACKATHON"  
+  project: "QuibbleMail"
+  tags:
+    - node
+  brief: Made it possible to play chess using only email
+  isFeatured: false
+  
+- title: 'Supply Chain Digital Transformation Hackathon'
+  link: 'scdth'
+  type: "HACKATHON"
+  project: 'Black Fin'
+  tags:
+    - node
+    - postgres
+  roles:
+    - Backend Engineer
+    - Database Designer
+  brief: Enabled the LA Port Authority to visualize container movements
+  isFeatured: false

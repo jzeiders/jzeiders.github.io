@@ -1,0 +1,35 @@
+<div class="sidebar">
+	<div class="subheader">
+		About Me
+	</div>
+
+	{% assign profile = site.data.profile %}
+
+	<div class="description-container">
+		<p> {{profile.description}}</p>
+	</div>
+	<hr>
+	<div class="skills-container border-bottom">
+		<h4> I Have Experience with the following technologies:</h4>
+		<div class="skills-tags-container">
+			{% assign items = site.data.work | concat: site.data.hackathons | concat: site.data.projects %}
+			<!-- Get all the items -->
+			{% assign tagSets = items | map: 'tags' %} {% for tags in tagSets %} {% assign tagSet = tagSet | concat: tags %}
+			<!-- Merge arrrays -->
+			{% assign tagSetFiltered = tagSet | uniq %} {% endfor %} {% for tag in tagSetFiltered %}
+			<div class="tag padded">
+				{% include {{ tag | append: '.svg' | prepend: 'svg/' }} %}
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+	<hr>
+	<div class="awards-container border-bottom">
+		<h4> Awards </h4>
+		<div "awards-list-container">
+			{% for award in site.data.profile.awards %}
+			<p>{{award}} </p>
+			{% endfor %}
+		</div>
+	</div>
+</div>

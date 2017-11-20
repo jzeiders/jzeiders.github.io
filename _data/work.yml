@@ -1,0 +1,53 @@
+- title: Syngenta Digital Innovation Lab
+  startDate: May 2017
+  endDate: August 2017
+  image:
+  type: "INTERNSHIP"
+  link: syngenta 
+  tags:
+    - react
+    - node
+    - docker
+    - aws
+    - typescript
+    - nginx
+  role:
+    - Full Stack Intern
+  projects: 
+    - (Mayflower) Project CMS System
+    - ()
+  brief:
+    - Full Stack Intern for Advanced Internal Projects
+  isFeatured: true
+
+- title: ACT Lab
+  startDate: November 2016
+  endDate: Now
+  type: "REASEARCH ASSISTANT"
+  link: actlab
+  tags: 
+    - jquery
+    - node
+    - aws
+    - python
+  role:
+    - Web Developer
+  brief:
+    - Web Developer working on cooperative AI simulation
+  isFeatured: true
+
+- title: CCRPC
+  link: ccrpc
+  startDate: May 2016
+  endDate: August 2016
+  type: INTERNSHIP
+  tags:
+    - angular
+    - node
+    - postgres
+    - docker
+  role:
+    - Mobile Development Intern
+  brief: 
+    - Ionic Developer for Pedestrian data collection application
+  isFeatured: false

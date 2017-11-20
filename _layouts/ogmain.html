@@ -1,0 +1,97 @@
+<html>
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="/css/styles.css">
+	<title>John Zeiders</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="sidebar">
+			{% assign profile = site.data.profile %}
+			<div class="sidebar-header">
+				<div class="name-container">
+					<h2> {{profile.name }}</h2>
+				</div>
+				<div class="subtitle-container">
+					<h4>{{profile.position}}</h4>
+				</div>
+			</div>
+			<div class="description-container">
+				<p> {{profile.description}}</p>
+			</div>
+			<hr>
+			<div class="skills-container">
+				<h4> I Have Experience with the following technologies:</h4>
+				<div class="skills-tags-container">
+					{% assign items = site.data.work | concat: site.data.hackathons | concat: site.data.projects %}
+					<!-- Get all the items -->
+					{% assign tagSets = items | map: 'tags' %} {% for tags in tagSets %} {% assign tagSet = tagSet | concat: tags %}
+					<!-- Merge arrrays -->
+					{% assign tagSetFiltered = tagSet | uniq %} {% endfor %} {% for tag in tagSetFiltered %}
+
+					<div class="tag padded">
+						{% include {{ tag | append: '.svg' }} %}
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<hr>
+			<div class="awards-container">
+				<h4> Awards </h4>
+				<div "awards-list-container">
+					{% for award in site.data.profile.awards %}
+					<p>{{award}} </p>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="grid">
+			<div class="grid-row">
+				<div class="section-header ">
+					<h2> Featured</h2>
+				</div>
+			</div>
+			<div class="grid-row ">
+				{% assign items = site.data.work | concat: site.data.hackathons | concat: site.data.projects %} {% for item in items %} {%
+				if item.isFeatured %} {% include card.html item=item %} {% endif %} {% endfor %}
+			</div>
+			<hr>
+			<div class="grid-row ">
+				<div class="section-header ">
+					<h2> Hackathons</h2>
+				</div>
+			</div>
+			<div class="grid-row ">
+				{% assign items = site.data.hackathons %}{% for item in items %} {% include card.html item=item %} {% endfor %}
+			</div>
+			<hr>
+			<div class="grid-row ">
+				<div class="section-header ">
+					<h2> Work Experience</h2>
+				</div>
+			</div>
+			<div class="grid-row ">
+				{% assign items = site.data.work %}{% for item in items %} {% include card.html item=item %} {% endfor %}
+			</div>
+			<hr>
+			<div class="grid-row ">
+				<div class="section-header ">
+					<h2> Projects</h2>
+				</div>
+			</div>
+			<div class="grid-row ">
+				{% assign items = site.data.projects %}{% for item in items %} {% include card.html item=item %} {% endfor %}
+			</div>
+		</div>
+		<div class="footer ">
+			<div> This is the footer</div>
+		</div>
+	</div>
+
+</body>
+
+<script src="/assets/script.js"></script>
+
+</html>
