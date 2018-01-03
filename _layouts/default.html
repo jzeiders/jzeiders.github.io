@@ -3,15 +3,28 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-	<link rel="stylesheet" href={{ "/css/styles.css"| relative_url }}>
+	<link rel="stylesheet" href="css/styles.css">
 	<title>John Zeiders</title>
+	<link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111727291-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-111727291-1');
+
+	</script>
+
 </head>
 
 <body>
 	<div class="container">
-		<div class="container-header">
-			John Zeiders
-		</div>
+		{% include header.html %}
 		<div class="container-content">
 			{% include sidebar.html %}
 			<!-- Sidebar -->
@@ -48,6 +61,6 @@
 	{% include footer.html %}
 </body>
 
-<script src={{ "/assets/script.js" | relative_url }}></script>
+<script src="assets/script.js"></script>
 
 </html>

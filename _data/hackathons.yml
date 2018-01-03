@@ -1,5 +1,5 @@
 - title: 'Hacktech 2017'
-  link: 'Hacktech'
+  link: 'hacktech'
   project: Tour
   type: "HACKATHON"
   tags: 
@@ -83,3 +83,26 @@
     - Database Designer
   brief: Enabled the LA Port Authority to visualize container movements
   isFeatured: false
+
+- title: 'Hackduke 2017'
+  link: "hackduke2017"
+  type: "HACKATHON"
+  project: "Smart Air"
+  tags:
+    - node
+    # - react native
+  roles:
+    - Mobile Developer
+  brief: 'Automated car based on air quality measurements'
+  isFeatured: false
+
+- title: 'YHacks 2017'
+  link: "yhacks2017"
+  type: "HACKATHON"
+  project: "MediJet"
+  tags:
+    - react
+  brief: 'Helped people find low-cast medical care'
+  isFeatured: false
+
+

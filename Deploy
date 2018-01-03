@@ -1,2 +1,3 @@
 #!/bin/bash  
-gsutil -m rsync -d -r ./ gs://personal-website-jack
+jekyll build
+gsutil -m rsync -d -r _site gs://www.john-zeiders.com

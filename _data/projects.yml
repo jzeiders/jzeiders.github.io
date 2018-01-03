@@ -1,14 +1,25 @@
 - title: Bashify
-  link: Bashify
+  link: bashify
   type: PROJECT
   brief: A command line project for spotify
   tags:
     - node
+  isFeatured: false
+  description: "In an attempt to save valuable mouse clicks, I created a CLI controller for spotify.
+  It was built on top of spotify's API. The project was distributed through NPM and picked up a small cult following.
+  "
+
 - title: Its Lit
   link: lit
-  brief: 
+  brief: Custom Dorm room lighting
   type: PROJECT
   tags:
     - arduino
     - node
     - css
+  isFeatured: false
+  description:
+    "Working with several roomates we created a custom lighting setup for the dorm. The setup consisted of 15 Meters of LEDs, one Arduino Mega, a Raspberry Pi, a microphone, an Iphone app, a Web App, an Android App, and a CLI interface. 
+    My primary role in the project was building the web controller and designing the mobile and web applications. The project supported full RBG color and a variery of patterns along with features for integrating with music beats and frequenices.
+    "
+

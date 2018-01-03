@@ -41,6 +41,8 @@ page_gen:
     template: 'project'
     dir: 'projects'
   
+sass:
+  style: compressed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
